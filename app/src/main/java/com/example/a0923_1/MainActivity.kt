@@ -1,6 +1,8 @@
 package com.example.a0923_1
 
 import android.os.Bundle
+import android.view.View
+import android.widget.Button
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -17,9 +19,17 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+
         var txv: TextView =
             findViewById(R.id.txv)
 
         txv.text = "0"
+    }
+
+    fun happy(v:View){
+        var txv: TextView = findViewById(R.id.txv)
+
+        txv.text = (1..100).random().toString()
     }
 }
